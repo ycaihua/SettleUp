@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		2D48C9DB1AD83F5400D21D04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48C9DA1AD83F5400D21D04 /* main.m */; };
 		2D48C9DE1AD83F5400D21D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48C9DD1AD83F5400D21D04 /* AppDelegate.m */; };
-		2D48C9E11AD83F5400D21D04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48C9E01AD83F5400D21D04 /* ViewController.m */; };
 		2D48C9E41AD83F5400D21D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D48C9E21AD83F5400D21D04 /* Main.storyboard */; };
 		2D48C9E61AD83F5400D21D04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D48C9E51AD83F5400D21D04 /* Images.xcassets */; };
 		2D48C9E91AD83F5400D21D04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D48C9E71AD83F5400D21D04 /* LaunchScreen.xib */; };
 		2D48C9F51AD83F5400D21D04 /* SettleUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48C9F41AD83F5400D21D04 /* SettleUpTests.m */; };
+		2D48CA001AD86E8200D21D04 /* SUInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48C9FF1AD86E8200D21D04 /* SUInputViewController.m */; };
+		2D48CA031AD86FEF00D21D04 /* CNLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48CA021AD86FEF00D21D04 /* CNLabel.m */; };
+		2D48CA061AD8742700D21D04 /* SUOutputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48CA051AD8742700D21D04 /* SUOutputViewController.m */; };
+		2D48CA081AD8769F00D21D04 /* Rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2D48CA071AD8769F00D21D04 /* Rules.txt */; };
+		2D48CA0B1AD8835400D21D04 /* NSArray+RandomSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48CA0A1AD8835400D21D04 /* NSArray+RandomSelection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +36,21 @@
 		2D48C9DA1AD83F5400D21D04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D48C9DC1AD83F5400D21D04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2D48C9DD1AD83F5400D21D04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2D48C9DF1AD83F5400D21D04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2D48C9E01AD83F5400D21D04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2D48C9E31AD83F5400D21D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D48C9E51AD83F5400D21D04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2D48C9E81AD83F5400D21D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2D48C9EE1AD83F5400D21D04 /* SettleUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SettleUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D48C9F31AD83F5400D21D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D48C9F41AD83F5400D21D04 /* SettleUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettleUpTests.m; sourceTree = "<group>"; };
+		2D48C9FE1AD86E8200D21D04 /* SUInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUInputViewController.h; path = ../SUInputViewController.h; sourceTree = "<group>"; };
+		2D48C9FF1AD86E8200D21D04 /* SUInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUInputViewController.m; path = ../SUInputViewController.m; sourceTree = "<group>"; };
+		2D48CA011AD86FEF00D21D04 /* CNLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLabel.h; sourceTree = "<group>"; };
+		2D48CA021AD86FEF00D21D04 /* CNLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNLabel.m; sourceTree = "<group>"; };
+		2D48CA041AD8742700D21D04 /* SUOutputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUOutputViewController.h; sourceTree = "<group>"; };
+		2D48CA051AD8742700D21D04 /* SUOutputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUOutputViewController.m; sourceTree = "<group>"; };
+		2D48CA071AD8769F00D21D04 /* Rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rules.txt; sourceTree = "<group>"; };
+		2D48CA091AD8835400D21D04 /* NSArray+RandomSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RandomSelection.h"; sourceTree = "<group>"; };
+		2D48CA0A1AD8835400D21D04 /* NSArray+RandomSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RandomSelection.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +92,18 @@
 		2D48C9D71AD83F5400D21D04 /* SettleUp */ = {
 			isa = PBXGroup;
 			children = (
+				2D48C9FE1AD86E8200D21D04 /* SUInputViewController.h */,
+				2D48C9FF1AD86E8200D21D04 /* SUInputViewController.m */,
+				2D48CA041AD8742700D21D04 /* SUOutputViewController.h */,
+				2D48CA051AD8742700D21D04 /* SUOutputViewController.m */,
+				2D48CA091AD8835400D21D04 /* NSArray+RandomSelection.h */,
+				2D48CA0A1AD8835400D21D04 /* NSArray+RandomSelection.m */,
 				2D48C9DC1AD83F5400D21D04 /* AppDelegate.h */,
 				2D48C9DD1AD83F5400D21D04 /* AppDelegate.m */,
-				2D48C9DF1AD83F5400D21D04 /* ViewController.h */,
-				2D48C9E01AD83F5400D21D04 /* ViewController.m */,
 				2D48C9E21AD83F5400D21D04 /* Main.storyboard */,
+				2D48CA071AD8769F00D21D04 /* Rules.txt */,
+				2D48CA011AD86FEF00D21D04 /* CNLabel.h */,
+				2D48CA021AD86FEF00D21D04 /* CNLabel.m */,
 				2D48C9E51AD83F5400D21D04 /* Images.xcassets */,
 				2D48C9E71AD83F5400D21D04 /* LaunchScreen.xib */,
 				2D48C9D81AD83F5400D21D04 /* Supporting Files */,
@@ -201,6 +219,7 @@
 			files = (
 				2D48C9E41AD83F5400D21D04 /* Main.storyboard in Resources */,
 				2D48C9E91AD83F5400D21D04 /* LaunchScreen.xib in Resources */,
+				2D48CA081AD8769F00D21D04 /* Rules.txt in Resources */,
 				2D48C9E61AD83F5400D21D04 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D48C9E11AD83F5400D21D04 /* ViewController.m in Sources */,
+				2D48CA0B1AD8835400D21D04 /* NSArray+RandomSelection.m in Sources */,
+				2D48CA061AD8742700D21D04 /* SUOutputViewController.m in Sources */,
 				2D48C9DE1AD83F5400D21D04 /* AppDelegate.m in Sources */,
+				2D48CA031AD86FEF00D21D04 /* CNLabel.m in Sources */,
+				2D48CA001AD86E8200D21D04 /* SUInputViewController.m in Sources */,
 				2D48C9DB1AD83F5400D21D04 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SettleUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SettleUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +436,7 @@
 				2D48C9FA1AD83F5400D21D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D48C9FB1AD83F5400D21D04 /* Build configuration list for PBXNativeTarget "SettleUpTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +445,7 @@
 				2D48C9FD1AD83F5400D21D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

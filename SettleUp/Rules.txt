@@ -1,0 +1,68 @@
+(Positive) Pick up a wood when you make a road.#
+(Positive) Pick up a brick when you make a road.#
+(Positive) Pick up a sheep when you make a road.#
+(Positive) Pick up a wheat when you make a road.#
+(Positive) Pick up an ore when you make a road.#
+(Positive) Pick up a wood when you make a settlement.#
+(Positive) Pick up a brick when you make a settlement.#
+(Positive) Pick up a sheep when you make a settlement.#
+(Positive) Pick up a wheat when you make a settlement.#
+(Positive) Pick up an ore when you make a settlement.#
+(Positive) Everyone has access to a 3-to-1 conversion.#
+(Positive) 2s and 12s are gold spots.#
+(Positive) 3s and 11s are gold spots.#
+(Positive) 4s and 10s are gold spots.#
+(Positive) 5s and 9s are gold spots.#
+(Positive) 6s and 8s are gold spots.#
+(Positive) The desert is a gold spot (pick up on 7s before calculating dumping).#
+(Positive) If you're on the desert, you don't need to dump on 7s.#
+(Positive) Cities cost 1 less ore.#
+(Positive) Cities cost 1 less wheat.#
+(Positive) Everyone places 2 roads per settlement at the start.#
+(Positive) On moving the knight, steal from anyone, even if not on the chosen spot.#
+(Positive) Draw a dev card when placing your first settlement.#
+(Positive) Place a road whenever you draw a dev card.#
+(Positive) Everyone has access to the 2-to-1 wood conversion.#
+(Positive) Everyone has access to the 2-to-1 brick conversion.#
+(Positive) Everyone has access to the 2-to-1 wheat conversion.#
+(Positive) Everyone has access to the 2-to-1 sheep conversion.#
+(Positive) Everyone has access to the 2-to-1 ore conversion.#
+(Positive) Rolling a 6 also counts as rolling a 2.#
+(Positive) Rolling an 8 also counts as rolling a 12.#
+(Positive) You can play 2 dev cards each turn.#
+(Positive) Place monopolies and years of plenty back in the deck after use.#&
+(Negative) On moving the knight, must be on one of your own spots.#
+(Negative) On moving the knight, take 2 cards, but put them both back in the pile.#
+(Negative) Wood and brick 2-for-1 ports are disabled.#
+(Negative) Wheat and ore 2-for-1 ports are disabled.#
+(Negative) Sheep and wheat 2-for-1 ports are disabled.#
+(Negative) Building a road costs 1 additional card of your choice.#
+(Negative) Building a settlement costs 1 additional card of your choice.#
+(Negative) Building a city costs 1 additional card of your choice.#
+(Negative) Buying a dev card costs 1 additional card of your choice.#
+(Negative) Largest army only grants 1 victory point.#
+(Negative) Longest road only grants 1 victory point.#
+(Negative) Minimum 4 knights to be eligible for largest army.#
+(Negative) Minimum 7 roads to be eligible for longest road.#
+(Negative) Minimum 6 cards to dump (dump 3 if you have 6).#
+(Negative) Playing a dev card costs 1 card of your choice.#
+(Negative) You can't place either initial settlement on the water.#
+(Negative) You must place one initial settlement on the water.#&
+(Drinking) Drink when the knight is placed on one of your spots.#
+(Drinking) Drink when stolen from.#
+(Drinking) Drink when a 6 or 8 (that you aren't on) is rolled.#
+(Drinking) Drink when a 5 or 9 (that you aren't on) is rolled.#
+(Drinking) Drink when a 4 or 10 (that you aren't on) is rolled.#
+(Drinking) Finish your drink when a 3 or 11 (that you aren't on) is rolled.#
+(Drinking) Finish your drink when a 2 or 12 (that you aren't on) is rolled.#
+(Drinking) Drink before placing each road or settlement.#
+(Drinking) Drink before playing each city or dev card.#
+(Drinking) Finish your drink when forced to dump cards.#
+(Drinking) When you roll a 7, choose someone to drink.#
+(Drinking) When you steal, predict what the card is - if correct, the victim finishes his drink.#
+(Drinking) Drink before using each port conversion.#
+(Drinking) Drink whenever collecting wood.#
+(Drinking) Drink whenever collecting brick.#
+(Drinking) Drink whenever collecting wheat.#
+(Drinking) Drink whenever collecting sheep.#
+(Drinking) Drink whenever collecting ore.#

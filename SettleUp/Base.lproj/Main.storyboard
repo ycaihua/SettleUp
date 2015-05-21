@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SUInputViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,282 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SettleUp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngk-IS-SvI">
+                                <rect key="frame" x="220" y="35" width="161" height="40"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PHI-OQ-aeU">
+                                <rect key="frame" x="16" y="83" width="568" height="42"/>
+                                <string key="text">Select however many rules of each kind that you want (between 1 and 5 total rules). Then press Go, and we'll generate some random rules for your Settlers of Catan game.</string>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rar-Re-34b">
+                                <rect key="frame" x="16" y="165" width="38" height="74"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrementArrowPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kP9-c4-ewp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHb-yg-5M3">
+                                <rect key="frame" x="89" y="165" width="38" height="74"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementArrowPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eZS-Ef-d1S"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfI-fO-ZMd" customClass="CNLabel">
+                                <rect key="frame" x="54" y="171" width="35" height="62"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Positive Rules" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Am2-p3-B3q">
+                                <rect key="frame" x="127" y="188" width="151" height="24"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules that increase the power of the players." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEb-J3-Bdg" customClass="CNLabel">
+                                <rect key="frame" x="127" y="212" width="299" height="14"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIE-JL-tWD">
+                                <rect key="frame" x="16" y="241" width="38" height="74"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrementArrowPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RHX-ig-0px"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-nD-uWr">
+                                <rect key="frame" x="89" y="241" width="38" height="74"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementArrowPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DLl-3g-PFQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzS-p3-pve" customClass="CNLabel">
+                                <rect key="frame" x="54" y="247" width="35" height="62"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negative Rules" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QM-ZO-Eza">
+                                <rect key="frame" x="127" y="264" width="173" height="24"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules that decrease the power of the players." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDg-Lu-CUO" customClass="CNLabel">
+                                <rect key="frame" x="127" y="288" width="306" height="14"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-uE-GWD">
+                                <rect key="frame" x="16" y="310" width="38" height="74"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrementArrowPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pW1-EV-88i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwt-Xe-fJL">
+                                <rect key="frame" x="89" y="310" width="38" height="74"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementArrowPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cgW-GE-l2x"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQn-6r-9ur" customClass="CNLabel">
+                                <rect key="frame" x="54" y="316" width="35" height="62"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="62"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drinking Rules" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-Is-jAM">
+                                <rect key="frame" x="127" y="333" width="158" height="24"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why not?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8n-s4-Fj1">
+                                <rect key="frame" x="127" y="357" width="63" height="14"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhs-2J-3tW">
+                                <rect key="frame" x="242" y="395" width="117" height="76"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="64"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wGe-gT-Bb8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PIE-JL-tWD" firstAttribute="top" secondItem="rar-Re-34b" secondAttribute="bottom" constant="2" id="0LC-8J-a8T"/>
+                            <constraint firstAttribute="centerX" secondItem="Mhs-2J-3tW" secondAttribute="centerX" id="0Mg-Db-BzX"/>
+                            <constraint firstItem="Sna-Is-jAM" firstAttribute="leading" secondItem="gwt-Xe-fJL" secondAttribute="trailing" id="0PL-1i-UBh"/>
+                            <constraint firstItem="gwt-Xe-fJL" firstAttribute="centerY" secondItem="VQn-6r-9ur" secondAttribute="centerY" id="0ec-MK-e7z"/>
+                            <constraint firstItem="PHb-yg-5M3" firstAttribute="baseline" secondItem="VEb-J3-Bdg" secondAttribute="baseline" id="4zS-mw-fan"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VEb-J3-Bdg" secondAttribute="trailing" constant="158" id="5dh-0S-RVz"/>
+                            <constraint firstItem="Wd5-nD-uWr" firstAttribute="leading" secondItem="fzS-p3-pve" secondAttribute="trailing" id="7O5-j8-9xZ"/>
+                            <constraint firstItem="PHI-OQ-aeU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7PP-Kw-YXB"/>
+                            <constraint firstItem="FDg-Lu-CUO" firstAttribute="top" secondItem="0QM-ZO-Eza" secondAttribute="bottom" id="7wY-UF-rpO"/>
+                            <constraint firstAttribute="centerX" secondItem="ngk-IS-SvI" secondAttribute="centerX" constant="-0.5" id="8bz-Xf-mo8"/>
+                            <constraint firstItem="PHb-yg-5M3" firstAttribute="leading" secondItem="MfI-fO-ZMd" secondAttribute="trailing" id="AQM-hd-YFW"/>
+                            <constraint firstItem="Sna-Is-jAM" firstAttribute="leading" secondItem="p8n-s4-Fj1" secondAttribute="leading" id="BxF-E9-l2m"/>
+                            <constraint firstItem="Vcd-uE-GWD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="N6Q-7i-p8W"/>
+                            <constraint firstItem="PHb-yg-5M3" firstAttribute="centerY" secondItem="rar-Re-34b" secondAttribute="centerY" id="ONI-49-oRS"/>
+                            <constraint firstItem="gwt-Xe-fJL" firstAttribute="leading" secondItem="VQn-6r-9ur" secondAttribute="trailing" id="Ppq-nk-NrN"/>
+                            <constraint firstItem="rar-Re-34b" firstAttribute="top" secondItem="PHI-OQ-aeU" secondAttribute="bottom" constant="40" id="RB9-UV-4CK"/>
+                            <constraint firstItem="Wd5-nD-uWr" firstAttribute="centerY" secondItem="fzS-p3-pve" secondAttribute="centerY" id="TNZ-7P-3iQ"/>
+                            <constraint firstItem="fzS-p3-pve" firstAttribute="leading" secondItem="PIE-JL-tWD" secondAttribute="trailing" id="TsL-am-suZ"/>
+                            <constraint firstItem="fzS-p3-pve" firstAttribute="leading" secondItem="PIE-JL-tWD" secondAttribute="trailing" id="UFE-1y-nNc"/>
+                            <constraint firstItem="VEb-J3-Bdg" firstAttribute="top" secondItem="Am2-p3-B3q" secondAttribute="bottom" id="UmC-e4-F4U"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="VEb-J3-Bdg" secondAttribute="trailing" id="VJX-uK-9Lj"/>
+                            <constraint firstItem="Vcd-uE-GWD" firstAttribute="centerY" secondItem="VQn-6r-9ur" secondAttribute="centerY" id="XBG-uf-ykp"/>
+                            <constraint firstItem="0QM-ZO-Eza" firstAttribute="leading" secondItem="FDg-Lu-CUO" secondAttribute="leading" id="Xtc-Qt-KJf"/>
+                            <constraint firstItem="0QM-ZO-Eza" firstAttribute="leading" secondItem="Wd5-nD-uWr" secondAttribute="trailing" id="YPF-zJ-Kk0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PHI-OQ-aeU" secondAttribute="trailing" id="ZzR-mY-FY3"/>
+                            <constraint firstItem="gwt-Xe-fJL" firstAttribute="baseline" secondItem="p8n-s4-Fj1" secondAttribute="baseline" id="c3s-VZ-ZKR"/>
+                            <constraint firstItem="Am2-p3-B3q" firstAttribute="leading" secondItem="VEb-J3-Bdg" secondAttribute="leading" id="cDt-oZ-X1K"/>
+                            <constraint firstItem="ngk-IS-SvI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="djD-Do-erK"/>
+                            <constraint firstItem="fzS-p3-pve" firstAttribute="centerY" secondItem="PIE-JL-tWD" secondAttribute="centerY" id="eiJ-Mk-Hax"/>
+                            <constraint firstItem="PIE-JL-tWD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gSr-Ba-5rj"/>
+                            <constraint firstItem="Wd5-nD-uWr" firstAttribute="centerY" secondItem="PIE-JL-tWD" secondAttribute="centerY" id="h7F-y2-nx0"/>
+                            <constraint firstItem="Vcd-uE-GWD" firstAttribute="top" secondItem="PIE-JL-tWD" secondAttribute="bottom" constant="-5" id="iM8-GE-n2s"/>
+                            <constraint firstItem="Am2-p3-B3q" firstAttribute="leading" secondItem="PHb-yg-5M3" secondAttribute="trailing" id="lQE-qG-NDN"/>
+                            <constraint firstItem="VQn-6r-9ur" firstAttribute="leading" secondItem="Vcd-uE-GWD" secondAttribute="trailing" id="lS3-Wt-IsD"/>
+                            <constraint firstItem="Wd5-nD-uWr" firstAttribute="baseline" secondItem="FDg-Lu-CUO" secondAttribute="baseline" id="okO-R5-JPH"/>
+                            <constraint firstItem="Am2-p3-B3q" firstAttribute="top" secondItem="PHb-yg-5M3" secondAttribute="top" constant="6" id="onh-Yo-cAa"/>
+                            <constraint firstItem="PIE-JL-tWD" firstAttribute="centerY" secondItem="fzS-p3-pve" secondAttribute="centerY" id="oth-oi-ve7"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="FDg-Lu-CUO" secondAttribute="trailing" id="qND-NW-AUY"/>
+                            <constraint firstItem="PHI-OQ-aeU" firstAttribute="top" secondItem="ngk-IS-SvI" secondAttribute="bottom" constant="8" id="qzc-DD-qmL"/>
+                            <constraint firstItem="p8n-s4-Fj1" firstAttribute="top" secondItem="Sna-Is-jAM" secondAttribute="bottom" id="ria-he-HOL"/>
+                            <constraint firstAttribute="width" secondItem="PHI-OQ-aeU" secondAttribute="width" id="txJ-rx-meQ"/>
+                            <constraint firstItem="VEb-J3-Bdg" firstAttribute="top" secondItem="Am2-p3-B3q" secondAttribute="bottom" id="u7S-82-Qyf"/>
+                            <constraint firstItem="MfI-fO-ZMd" firstAttribute="centerY" secondItem="rar-Re-34b" secondAttribute="centerY" id="uxZ-Av-SDI"/>
+                            <constraint firstItem="rar-Re-34b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="v6f-B6-KtL"/>
+                            <constraint firstAttribute="centerX" secondItem="PHI-OQ-aeU" secondAttribute="centerX" id="vDy-fp-LQN"/>
+                            <constraint firstItem="MfI-fO-ZMd" firstAttribute="leading" secondItem="rar-Re-34b" secondAttribute="trailing" id="wJr-Ap-t28"/>
+                            <constraint firstItem="Mhs-2J-3tW" firstAttribute="top" secondItem="p8n-s4-Fj1" secondAttribute="bottom" constant="24" id="xfR-5g-1ys"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="txJ-rx-meQ"/>
+                                <exclude reference="onh-Yo-cAa"/>
+                                <exclude reference="5dh-0S-RVz"/>
+                                <exclude reference="u7S-82-Qyf"/>
+                                <exclude reference="TsL-am-suZ"/>
+                                <exclude reference="eiJ-Mk-Hax"/>
+                                <exclude reference="h7F-y2-nx0"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outletCollection property="counterLabels" destination="MfI-fO-ZMd" id="Mv3-DP-u37"/>
+                        <outletCollection property="counterLabels" destination="fzS-p3-pve" id="vyI-zu-zrr"/>
+                        <outletCollection property="counterLabels" destination="VQn-6r-9ur" id="Huc-n2-Szz"/>
+                        <segue destination="Hk0-OI-d9Q" kind="show" identifier="DisplayOutputSegue" id="dsK-Nl-cP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Output View Controller-->
+        <scene sceneID="oF2-Qi-AZV">
+            <objects>
+                <viewController id="Hk0-OI-d9Q" customClass="SUOutputViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJ8-gW-u60"/>
+                        <viewControllerLayoutGuide type="bottom" id="XQ6-4J-JyD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CbB-We-py1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Rules" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARy-g5-v5U">
+                                <rect key="frame" x="203" y="20" width="195" height="40"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDk-QK-8bW">
+                                <rect key="frame" x="16" y="566" width="123" height="34"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="22"/>
+                                <state key="normal" title="Back Home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backHomeButtonPressed:" destination="Hk0-OI-d9Q" eventType="touchUpInside" id="G8x-fX-Tir"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dk2-yJ-2v9">
+                                <rect key="frame" x="486" y="566" width="98" height="34"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="22"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryAgainButtonPressed:" destination="Hk0-OI-d9Q" eventType="touchUpInside" id="aV4-Ds-6pt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XQ6-4J-JyD" firstAttribute="top" secondItem="Dk2-yJ-2v9" secondAttribute="bottom" id="4Km-1S-Ham"/>
+                            <constraint firstAttribute="centerX" secondItem="ARy-g5-v5U" secondAttribute="centerX" id="4Ok-9P-0lZ"/>
+                            <constraint firstItem="aDk-QK-8bW" firstAttribute="leading" secondItem="CbB-We-py1" secondAttribute="leadingMargin" id="GNm-gZ-z64"/>
+                            <constraint firstItem="Dk2-yJ-2v9" firstAttribute="trailing" secondItem="CbB-We-py1" secondAttribute="trailingMargin" id="HG4-8L-GbQ"/>
+                            <constraint firstItem="ARy-g5-v5U" firstAttribute="leading" secondItem="CbB-We-py1" secondAttribute="leadingMargin" constant="204" id="Lug-lq-AcR"/>
+                            <constraint firstItem="ARy-g5-v5U" firstAttribute="top" secondItem="FJ8-gW-u60" secondAttribute="bottom" id="gVE-kg-lP8"/>
+                            <constraint firstItem="aDk-QK-8bW" firstAttribute="leading" secondItem="CbB-We-py1" secondAttribute="leadingMargin" constant="120" id="ppk-RM-fby"/>
+                            <constraint firstItem="XQ6-4J-JyD" firstAttribute="top" secondItem="aDk-QK-8bW" secondAttribute="bottom" id="pxZ-Nr-Zbw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Lug-lq-AcR"/>
+                                <exclude reference="ppk-RM-fby"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="ARy-g5-v5U" id="v9d-4L-0Y1"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="ReturnHomeSegue" id="kBN-zz-xoC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmu-4M-bz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="278"/>
         </scene>
     </scenes>
 </document>

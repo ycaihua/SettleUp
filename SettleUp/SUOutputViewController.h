@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SUOutputViewController.h
 //  SettleUp
 //
 //  Created by Connor Neville on 4/10/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SUOutputViewController : UIViewController
 
+@property NSMutableArray* counterValues;
 
 @end
-
